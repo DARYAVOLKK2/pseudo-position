@@ -1,0 +1,145 @@
+*,*:before,*:after{-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box;}
+:focus,:active{outline:none;}
+a:focus,a:active{outline:none;}
+nav,footer,header,aside{display:block;}
+html,body{height:100%;width:100%;font-size:100%;line-height:1;font-size:14px;-ms-text-size-adjust:100%;-moz-text-size-adjust:100%;-webkit-text-size-adjust:100%;}
+input,button,textarea{font-family:inherit;}
+/* специфические псевдоэлементы */
+/* убирает крестик в посиковой строке  */
+input::-ms-clear{
+    display:none;}
+/* убирает лишние отступы в кнопке */
+button{cursor:pointer;}
+
+button::-moz-focus-inner{
+    padding:0;border:0;}
+
+a,a:visited{text-decoration:none;}
+a:hover{text-decoration:none;}
+ul li{list-style:none;}
+img{vertical-align:top;}
+h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit;}
+/* псевдоэлементы */
+/* before, after */
+
+.body {
+    padding: 30px;
+}
+.text {
+    font-size: 24px;
+    line-height: 33px;
+    margin: 0px 0px 30px 0px;
+}
+.text::first-line {
+    background-color: rebeccapurple;
+    color: white;
+}
+.text::first-letter {
+    font-size: 50px;
+    color: rgb(230, 16, 16);
+}
+.list{
+
+}
+.list_1 li {
+    font-size: 24px;
+    margin: 0px 0px 20px 0px;
+}
+.list_1 li::before{
+    content: '😀';
+    margin-right: 30px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: rgb(89, 0, 255);
+    display: inline-block;
+}
+.list_1 li::after{
+    content: '😆';
+    margin-left: 20px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: red;
+    display: inline-block;
+}
+.list_1 li:hover::after{
+    background-color: yellow;
+}
+.list_1 li:hover::before{
+    background-color: rgb(9, 255, 0);
+}
+/* псевдоклассы */
+
+.block {
+    margin: 0px 0px 30px 0px;
+}
+.block:hover {
+    background: rgb(169, 169, 240);
+}
+.block p{
+    font-size: 18px;
+    line-height: normal24px;
+    margin: 0px 0px 20px 0px;
+}
+.block p:nth-child(odd){
+    background-color: rgb(214, 184, 147);
+}
+.link {
+    color: red;
+}
+
+.text_input {
+    border: 1px solid rgb(211, 186, 186);
+    height: 50px;
+    width: 300px;
+    padding: 0px 15px;
+    margin-bottom: 15px;
+}
+.text_input:focus {
+    box-shadow: 0 0 10px rgb(89, 0, 2);
+}
+/* псевдокласс состояния */
+.link:hover {
+    color: rgb(255, 123, 0);
+    text-decoration: underline;
+}
+.link:visited {
+    color: aqua;
+}
+.link:active {
+    color: rgb(229, 255, 0);
+}
+.text_btn {
+    display: block;
+    width: 300px;
+    height: 50px;
+    background-color: rgb(0, 0, 0);
+    text-transform: uppercase;
+    color: antiquewhite;
+}
+.text_btn:hover{
+    background-color: #666;
+    color: yellow;
+}
+.text_btn:active{
+    background-color: rgb(194, 221, 221);
+}
+.list_2 {}
+.list_2 li{
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+.list_2 li:first-child{
+    color: blueviolet;
+}
+.list_2 li:last-child{
+    color: yellow;
+}
+/* odd нечетные элементы */
+.list_2 li:nth-child(3){
+    text-decoration: line-through;
+    /* background-color: blue; */
+    width: 250px;
+
+}
